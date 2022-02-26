@@ -10,10 +10,10 @@ Math Magik Designer
    * - tests
      - | |github| 
 
-.. |github| image:: https://github.com/rblack42/research-notes/actions/workflows/python-app.yml/badge.svg
+.. |github| image:: https://github.com/rblack42/research-notebook/actions/workflows/python-app.yml/badge.svg
     :alt: Github Workflows
     :target: https://github.com/rblack42/research-notes
    
 .. end-badges
 
-
+[![Python application](https://github.com/rblack42/research-notebook/actions/workflows/python-app.yml/badge.svg)](https://github.com/rblack42/research-notebook/actions/workflows/python-app.yml)

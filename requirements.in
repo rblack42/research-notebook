@@ -1,5 +1,12 @@
+# Jupyter requirements
 jupyter-book
 jupyter-contrib-nbextensions
+sphinxcontrib-napoleon
+sphinxcontrib-spelling
+sphinxcontrib-programoutput
+git+git://github.com/mkrphys/ipython-tikzmagic.git
+
+# application requirements
 numpy==1.21.5
 numpy-stl
 scipy
@@ -7,4 +14,11 @@ sympy
 matplotlib
 pint
 fluids
-git+git://github.com/mkrphys/ipython-tikzmagic.git
+
+# PyTest requirements
+pytest
+pytest-cov
+coverage
+coveralls
+
+

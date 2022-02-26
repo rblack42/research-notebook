@@ -12,3 +12,4 @@ __pycache__
 
 # Jupyter
 _build/
+**/.ipynb_checkpoints

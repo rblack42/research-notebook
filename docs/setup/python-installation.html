@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Installation &#8212; Research Notebook</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/lpp.gif" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Research Notebook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Research Notebook
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../markdown-notebooks.html">
+   Notebooks with MyST Markdown
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/setup/python-installation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rblack42/research-notebook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rblack42/research-notebook/issues/new?title=Issue%20on%20page%20%2Fsetup/python-installation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rblack42/research-notebook/master?urlpath=tree/docs/setup/python-installation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mac-install">
+   Mac Install
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-homebrew">
+     Installing Homebrew
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#homebrew-basics">
+     Homebrew Basics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#check-the-homebrew-is-installed">
+       Check the Homebrew is installed
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#check-the-homebrew-is-properly-configured">
+       Check the Homebrew is properly configured
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#find-a-tool-to-install">
+       Find a tool to install
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-python">
+     Installing Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-virtual-environments">
+   Python Virtual Environments
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#virtual-environments">
+     Virtual Environments
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#direnv">
+       direnv
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creating-a-new-environment">
+       Creating a New Environment
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Python Installation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mac-install">
+   Mac Install
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-homebrew">
+     Installing Homebrew
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#homebrew-basics">
+     Homebrew Basics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#check-the-homebrew-is-installed">
+       Check the Homebrew is installed
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#check-the-homebrew-is-properly-configured">
+       Check the Homebrew is properly configured
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#find-a-tool-to-install">
+       Find a tool to install
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-python">
+     Installing Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-virtual-environments">
+   Python Virtual Environments
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#virtual-environments">
+     Virtual Environments
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#direnv">
+       direnv
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creating-a-new-environment">
+       Creating a New Environment
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="python-installation">
+<h1>Python Installation<a class="headerlink" href="#python-installation" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will work through the basic installation of Python on your system. I will provide instructions for all three major systems:</p>
+<ul class="simple">
+<li><p>MacOS</p></li>
+<li><p>Windows 10</p></li>
+<li><p>Ubuntu Linux</p></li>
+</ul>
+<p>(Yes, there are other/newer operating systems out there, but this should handle most users. It also represents the set of machines I use for testing my code.</p>
+<p>Since I do all of my development work on a Macbook laptop, I will begin with instructions for that system</p>
+<div class="section" id="mac-install">
+<h2>Mac Install<a class="headerlink" href="#mac-install" title="Permalink to this headline">¶</a></h2>
+<p>You can download the standard <em>Python</em> installer from the <a class="reference external" href="https://python.org">project website</a>, or use the following, more useful, setup procedure.</p>
+<div class="section" id="installing-homebrew">
+<h3>Installing Homebrew<a class="headerlink" href="#installing-homebrew" title="Permalink to this headline">¶</a></h3>
+<p>If you own a Mac and plan to use it for development work, I highly recommend that you install <a class="reference external" href="https://brew.sh/">Homebrew</a>, a tool the can install many of the tools developers depend on in their work. Installation involves running this command:</p>
+</div>
+<div class="section" id="homebrew-basics">
+<h3>Homebrew Basics<a class="headerlink" href="#homebrew-basics" title="Permalink to this headline">¶</a></h3>
+<p><em>Homebrew</em> is a command line tool. I will show examples by running commands on my system. In a <em>Jupyter</em> code block, you can run any command by preceding it with an exclamation point. The output will be displayed right below the command.</p>
+<p>Here are the basic commands you need to know for now:</p>
+<div class="section" id="check-the-homebrew-is-installed">
+<h4>Check the Homebrew is installed<a class="headerlink" href="#check-the-homebrew-is-installed" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>brew --version
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Homebrew 3.3.16
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Homebrew/homebrew-core (git revision 5edf1cd15f7; last commit 2022-02-26)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Homebrew/homebrew-cask (git revision 1ab7ecfeaa; last commit 2022-02-27)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="check-the-homebrew-is-properly-configured">
+<h4>Check the Homebrew is properly configured<a class="headerlink" href="#check-the-homebrew-is-properly-configured" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> brew doctor
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your system is ready to brew.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$/bin/bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>(Note that the dollar sign is the command prompt on Linix/Mac)</p>
+</div>
+<div class="section" id="find-a-tool-to-install">
+<h4>Find a tool to install<a class="headerlink" href="#find-a-tool-to-install" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>brew search python3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Blue">==&gt;</span> <span class=" -Color -Color-Bold">Formulae</span>
+boost-python3   python@3.7      <span class=" -Color -Color-Bold">python@3.9 </span><span class=" -Color -Color-Bold -Color-Bold-Green">✔</span>    bpython         cython
+<span class=" -Color -Color-Bold">python@3.10 </span><span class=" -Color -Color-Bold -Color-Bold-Green">✔</span>   python@3.8      ipython         jython
+
+If you meant &quot;python3&quot; specifically:
+It was migrated from homebrew/cask to homebrew/core.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The check marks after two entries indicate that those tools have already been installed on your system. Developers like t run their code on multiple versions of Python in case their users are not running the most up-to-date versions.</p>
+<p>If you want a specific version you will name that version as shown in this list. Otherwise <em>Homebrew</em> will chose the latest version automatically.</p>
+</div>
+</div>
+<div class="section" id="installing-python">
+<h3>Installing Python<a class="headerlink" href="#installing-python" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> brew install python3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running `brew update --preinstall`...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Blue">==&gt;</span> <span class=" -Color -Color-Bold">Auto-updated Homebrew!</span>
+Updated 1 tap (homebrew/core).
+<span class=" -Color -Color-Blue">==&gt;</span> <span class=" -Color -Color-Bold">Updated Formulae</span>
+Updated 1 formula.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">Warning:</span> python@3.9 3.9.10 is already installed and up-to-date.
+To reinstall 3.9.10, run:
+  brew reinstall python@3.9
+</pre></div>
+</div>
+</div>
+</div>
+<p>That is a lot of output considering Python was already installed on my system. Ignoring most of this output, the command installed Python version 3.10.2 which was the most current version available as I wrote this page.</p>
+</div>
+</div>
+<div class="section" id="python-virtual-environments">
+<h2>Python Virtual Environments<a class="headerlink" href="#python-virtual-environments" title="Permalink to this headline">¶</a></h2>
+<p>You may have notices some <em>version numbers</em> on things like Python above. Versions are major points in the development of a program, so they are pretty important. Programs are <em>released</em> to users and marked with a version number. These numbers are usually in the form of up to three parts with a dot between them:</p>
+<ul class="simple">
+<li><p>major - the left-most number. Everything might be different from a previous major version</p></li>
+<li><p>minor - the second part. Here the user interface is th same, but new features have been added</p></li>
+<li><p>patch - (might not exist) these changes are bug fixes only</p></li>
+</ul>
+<p>All of this is fine, except for on huge problem!</p>
+<p>A program might use tools written by another developers. That program <em>depends</em> on the version of those tools that were available when the developer was working. As time goes by, the tool developers may enhance or change their tools. The first developer now has a problem. The program may stop working until it can be updated.</p>
+<p>This whole problem leads to many sleepless nights, but in the <em>Python</em> world there is a solution.</p>
+<div class="section" id="virtual-environments">
+<h3>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this headline">¶</a></h3>
+<p>A <em>virtual environment</em> is an isolated world where all <em>dependencies</em> can be managed. Python has supported this schee for any years, and is quite common for developers to set this system up for each proect they work on. I will show how I create this setup on my Mac, and show optional ways to do the same thing on Windows and Linux. Unfortunately, The same scheme cannot be used on every machine at present.</p>
+<div class="section" id="direnv">
+<h4>direnv<a class="headerlink" href="#direnv" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference external" href="https://direnv.net/">direnv</a> program can manage Python proects in a simple way. Once set up, any time you navigate into a project folder your environment will be activated and you are ready to work.</p>
+<p>Here is how we install this tool:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>brew install direnv
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">Warning:</span> direnv 2.30.3 is already installed and up-to-date.
+To reinstall 2.30.3, run:
+  brew reinstall direnv
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once this program has been installed, you need to tell your machine to use it. On the Mac, this involces adding a line in the <strong>.zshrc</strong> file in your home directory&gt; Here is the line in my file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>direnv hook zsh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Once this line is in place, any new terminal session will be able ot use the <strong>firenv</strong> created environments.</p>
+</div>
+<div class="section" id="creating-a-new-environment">
+<h4>Creating a New Environment<a class="headerlink" href="#creating-a-new-environment" title="Permalink to this headline">¶</a></h4>
+<p>Creating a new environment is a two step process:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s1">&#39;layout python3&#39;</span> &gt; .envrc
+$ direnv allow
+</pre></div>
+</div>
+<p>The first line just creates a text file named <strong>.envrc</strong> in the project directory. (This should be at the root of your project directory tree). The second line actually creates a new hidden directory named <strong>.direnv</strong> in that same directory. A complete copy of a basic Python installation will be copied into this directory and used every time you navigate into a proect directory. You should make sure <strong>git</strong> does not copy this directory to <em>GitHub</em> by adding an entry in the <strong>.gitignore</strong> gile. (See <a class="reference internal" href="git-setup.html"><span class="doc std std-doc">Git Setup</span></a> for more information</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./setup"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Roie R. Black<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

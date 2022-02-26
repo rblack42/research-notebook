@@ -4,6 +4,11 @@
 format: jb-book
 root: intro
 chapters:
+- file: setup/setup
+  sections:
+  - file: setup/git-setup
+  - file: setup/python-installation
+  - file: setup/jupyter-installation
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks

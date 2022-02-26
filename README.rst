@@ -7,6 +7,8 @@ Math Magik Designer
 .. start_badges
 
 .. list_table::
+   :stub-columns: 1
+
    * - tests
      - | |github| 
 
@@ -15,5 +17,3 @@ Math Magik Designer
     :target: https://github.com/rblack42/research-notes
    
 .. end-badges
-
-[![Python application](https://github.com/rblack42/research-notebook/actions/workflows/python-app.yml/badge.svg)](https://github.com/rblack42/research-notebook/actions/workflows/python-app.yml)

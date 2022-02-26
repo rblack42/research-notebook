@@ -84,6 +84,8 @@ entrypoints==0.4
     #   nbconvert
 executing==0.8.2
     # via stack-data
+flake8==4.0.1
+    # via -r requirements.in
 fluids==1.0.17
     # via -r requirements.in
 fonttools==4.29.1
@@ -211,6 +213,8 @@ matplotlib-inline==0.1.3
     # via
     #   ipykernel
     #   ipython
+mccabe==0.6.1
+    # via flake8
 mdit-py-plugins==0.2.8
     # via
     #   jupytext
@@ -315,12 +319,16 @@ pybtex==0.24.0
     #   sphinxcontrib-bibtex
 pybtex-docutils==1.0.1
     # via sphinxcontrib-bibtex
+pycodestyle==2.8.0
+    # via flake8
 pycparser==2.21
     # via cffi
 pydata-sphinx-theme==0.7.2
     # via sphinx-book-theme
 pyenchant==3.2.2
     # via sphinxcontrib-spelling
+pyflakes==2.4.0
+    # via flake8
 pygments==2.11.2
     # via
     #   ipython

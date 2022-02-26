@@ -21,3 +21,8 @@ nb:
 book:
 	jb build book/
 	cp -r book/_build/html/* docs/
+
+.PHONY: test
+test:
+	pytest tests
+	flake8 mmdesigner

@@ -1,0 +1,14 @@
+# Mac
+.DS_Store
+
+# VIM
+*~
+*.swp
+
+# Python
+__pycache__
+*.py[cod]
+.direnv/
+
+# Jupyter
+_build/

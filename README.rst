@@ -6,7 +6,7 @@ Math Magik Designer
 
 .. start_badges
 
-.. list_table::
+.. list-table::
    :stub-columns: 1
 
    * - tests
